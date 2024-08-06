@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="#{User.register.title}"></title>
+</head>
+	<body>
+		<div>
+			<h1 th:text="#{User.register.header"></h1>
+		</div>
+		<div>
+			<form action="#" th:action="@{/register}"  method="post">
+				<label for="name" th:text="#{User.register.name}"></label>
+	    		<input type="text" id="name" name="name" /> <br />
+	    		<label for="surname" th:text="#{User.register.surname}"></label>
+	    		<input type="text" id="surname" name="surname" /> <br />
+	    		<label for="dni" th:text="#{User.register.dni}"></label> 
+	    		<input type="text" id="dni" name="dni" /> <br />
+	    		<label for="email" th:text="#{User.register.email}"></label> 
+	    		<input type="text" id="email" name="email" /> <br />
+	    		<label for="cif" th:text="#{User.register.cif}"></label> 
+	    		<input type="text" id="cif" name="cif" /> <br />
+	    		<label for="password" th:text="#{User.register.password}"></label> 
+	    		<input type="text" id="password" name="password" /> <br />
+	    		<!--<label for="role" th:text="#{User.register.role}"></label>
+	            <select id="role" th:field="*{role}">
+	                <option th:each="eachstate : ${role}" th:value="${role}" th:selected="${user.role== eachrole}" th:text="${eachrole}"></option>
+	            </select>-->
+	    		<p><input type="submit" value="Submit" /></p>
+	    	</form>
+		</div>
+	</body>
+</html>

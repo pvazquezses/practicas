@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title th:text="#{User.login.title}"></title>
+  </head>
+  <body>
+    <div>
+    	<h1 th:text="#{User.login.header}"></h1>
+    </div>
+    <div>
+    	<form th:action="@{/login}" method="post" >
+	      <label for="email" th:text="#{User.login.email}"></label>
+	      <input type="text" id="email" name="email" autofocus="autofocus" required/> <br />
+	      <label for="password" th:text="#{User.login.password}"></label>
+	      <input type="password" id="password" name="password" required/> <br />
+	      <input type="submit" value="Log in" />
+	    </form>
+    </div>
+    <div>
+    	<input type= button th:action="@{/register}" value="Register">
+    </div>
+  </body>
+</html>
